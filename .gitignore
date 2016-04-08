@@ -1,0 +1,8 @@
+videos
+gifs
+audio
+downloads
+
+.idea
+*.iml
+.DS_Store
