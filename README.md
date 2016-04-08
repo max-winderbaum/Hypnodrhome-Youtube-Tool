@@ -31,8 +31,15 @@ to get audio conversion working ¯\\_(ツ)_/¯
 
 ## Examples
 
-    bash videoToGif.sh --video 37eEUsd1ASA --output test --startTime 10.56 --endTime 15.6
+    bash videoToGif.sh --video 37eEUsd1ASA --output myGif --startTime 10.56 --endTime 15.6
 
+    bash getVideo.sh --video 37eEUsd1ASA --output myVideo --startTime 20.4 --endtime 40
+
+    bash videoToMp3.sh --video 37eEUsd1ASA --output myAudio
+
+## TODO
+
+- Make it so audio files can have start/end times too
 
 ## Reference
 
