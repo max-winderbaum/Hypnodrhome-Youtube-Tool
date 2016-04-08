@@ -1,0 +1,2 @@
+moviepy==0.2.2.11
+youtube-dl=2016.4.6
