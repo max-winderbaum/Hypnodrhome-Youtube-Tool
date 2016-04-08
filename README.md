@@ -40,6 +40,7 @@ to get audio conversion working ¯\\_(ツ)_/¯
 ## TODO
 
 - Make it so audio files can have start/end times too
+- Import from google docs spreadsheet and run on a bulk set of videos so laypeople can do this too
 
 ## Reference
 
