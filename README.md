@@ -36,11 +36,10 @@ to get audio conversion working ¯\\_(ツ)_/¯
     bash getVideo.sh --video 37eEUsd1ASA --output myVideo --startTime 20.4 --endtime 40
 
     bash videoToMp3.sh --video 37eEUsd1ASA --output myAudio
+    
+    python fromSpreadsheet.py # Download a bunch of files from a GDocs spreadsheet
 
 ## TODO
-
-- Make it so audio files can have start/end times too
-- Import from google docs spreadsheet and run on a bulk set of videos so laypeople can do this too
 
 ## Reference
 

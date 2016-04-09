@@ -3,6 +3,8 @@ gifs
 audio
 downloads
 
+**/*.pyc
+
 .idea
 *.iml
 .DS_Store

@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-source $(dirname $0)/argparse.bash
-argparse "$@" <<EOF || exit 1
-parser.add_argument('-o', '--output',
-                    help='the name of the video file in /audio (without extension)')
-parser.add_argument('-v', '--videoUrl',
-                    help='the url of the video file to download')
-EOF
+# output, videoUrl, startTime, endTime
+source $(dirname $0)/bashArgumentParser.sh
 
-youtube-dl $VIDEOURL -o audio/$OUTPUT.mp3 -x --no-check-certificate --prefer-insecure
+youtube-dl $VIDEOURL -o "downloads/$OUTPUT.%(ext)s" -x --audio-format "mp3" --no-check-certificate --prefer-insecure
+
+python editAudio.py --output="$OUTPUT" --startTime="$STARTTIME" --endTime="$ENDTIME"

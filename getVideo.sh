@@ -1,16 +1,7 @@
 #!/usr/bin/env bash
 
-source $(dirname $0)/argparse.bash
-argparse "$@" <<EOF || exit 1
-parser.add_argument('-o', '--output',
-                    help='the name of the video file in /videos (without extension)')
-parser.add_argument('-v', '--videoUrl',
-                    help='the url of the video file to download')
-parser.add_argument('-s', '--startTime', default='0',
-                    help='the time, in seconds, to start the gif')
-parser.add_argument('-e', '--endTime', default=None,
-                    help='the time, in seconds, to end the gif')
-EOF
+# output, videoUrl, startTime, endTime
+source $(dirname $0)/bashArgumentParser.sh
 
 youtube-dl $VIDEOURL -o downloads/$OUTPUT --recode-video mp4 --no-check-certificate --prefer-insecure
 
