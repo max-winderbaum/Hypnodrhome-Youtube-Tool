@@ -2,8 +2,10 @@ import argparse
 
 def parseArgs():
 		parser = argparse.ArgumentParser(description='Process some integers.')
+		parser.add_argument('--input',
+		    help='the input file name (without extension)')
 		parser.add_argument('--output',
-				help='the name of the video file in /videos (without extension)')
+				help='the output file name (without extension)')
 		parser.add_argument('--startTime', default=0,
 				help='the time, in seconds, to start the gif')
 		parser.add_argument('--endTime', default=None,

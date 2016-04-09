@@ -6,7 +6,7 @@ import pythonArgumentParser
 args = pythonArgumentParser.parseArgs()
 
 if (args.gif):
-		clip = (VideoFileClip("downloads/" + args.output + ".mp4")
+		clip = (VideoFileClip("downloads/" + args.input + ".mp4")
 						.subclip(args.startTimeInSeconds, args.endTimeInSeconds)
 						.resize(0.3))
 

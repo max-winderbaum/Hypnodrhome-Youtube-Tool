@@ -9,8 +9,10 @@ http = urllib3.PoolManager()
 request = http.request('GET', url)
 csvFile = request.data
 
+currentProcessedIndex = 1
+
 # Kill the first line
-csvFile = '\n'.join(csvFile.split('\n')[1:])
+csvFile = '\n'.join(csvFile.split('\n')[currentProcessedIndex:])
 
 reader = csv.reader(csvFile.split('\n'), delimiter=',')
 for row in reader:

@@ -10,7 +10,7 @@ startTime = args.startTimeInSeconds * 1000
 if (args.endTimeInSeconds is not None):
 		endTime = args.endTimeInSeconds * 1000
 
-sound = AudioSegment.from_mp3("downloads/" + args.output + ".mp3")
+sound = AudioSegment.from_mp3("downloads/" + args.input + ".mp3")
 
 if (args.endTimeInSeconds is not None):
 		croppedSound = sound[startTime:endTime]
