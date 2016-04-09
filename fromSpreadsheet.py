@@ -14,7 +14,7 @@ csvFile = '\n'.join(csvFile.split('\n')[1:])
 
 reader = csv.reader(csvFile.split('\n'), delimiter=',')
 for row in reader:
-		if (len(row) == 5):
+		if (len(row) == 6):
 				print '\nProcessing row: ' + ','.join(row)
 				print '---------------------'
 				url = row[0]
@@ -22,19 +22,23 @@ for row in reader:
 				startTime = row[2]
 				endTime = row[3]
 				type = row[4]
+				tags = row[5]
 
 				if (type == 'gif'):
 						print 'Converting to gif...' + url
 						command = ['bash', './videoToGif.sh', '--video', url, '--output',
-											 name, '--startTime', startTime, '--endTime', endTime]
+											 name, '--startTime', startTime, '--endTime', endTime,
+											 '--tags', tags]
 				elif (type == 'audio'):
 						print 'Converting to audio file...'
 						command = ['bash', './videoToMp3.sh', '--video', url, '--output',
-											 name, '--startTime', startTime, '--endTime', endTime]
+											 name, '--startTime', startTime, '--endTime', endTime,
+											 '--tags', tags]
 				else:
 						print 'Processing video...'
 						command = ['bash', './getVideo.sh', '--video', url, '--output',
-											 name, '--startTime', startTime, '--endTime', endTime]
+											 name, '--startTime', startTime, '--endTime', endTime,
+											 '--tags', tags]
 
 		print ' '.join(command)
 		call(command)
