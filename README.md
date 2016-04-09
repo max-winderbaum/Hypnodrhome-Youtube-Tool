@@ -1,11 +1,11 @@
 # Hypnodrhome Youtube Tool
 
-This tool aims to make it easy to download and convert youtube videos
-to:
+This tool aims to make it easy to download and convert youtube videos, 
+with subsecond start and end times, to:
 
 - Audio Files
-- Animated Gifs (with subsecond start and end times)
-- Plain ol' Video Files (with subsecond start and end times)
+- Animated Gifs
+- Plain ol' Video Files
 
 ## Getting Started
 
@@ -36,8 +36,6 @@ to get audio conversion working ¯\\_(ツ)_/¯
     bash getVideo.sh --video 37eEUsd1ASA --output myVideo --startTime 20.4 --endtime 40
 
     bash videoToMp3.sh --video 37eEUsd1ASA --output myAudio
-    
-    python fromSpreadsheet.py # Download a bunch of files from a GDocs spreadsheet
 
 ## TODO
 
