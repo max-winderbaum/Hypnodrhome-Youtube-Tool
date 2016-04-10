@@ -12,7 +12,7 @@ if (args.gif):
 
 		clip.write_gif("gifs/" + args.output + ".gif")
 else:
-		clip = (VideoFileClip("downloads/" + args.output + ".mp4")
+		clip = (VideoFileClip("downloads/" + args.input + ".mp4")
 						.subclip(args.startTimeInSeconds, args.endTimeInSeconds))
 
 		clip.write_videofile("videos/" + args.output + ".mp4")

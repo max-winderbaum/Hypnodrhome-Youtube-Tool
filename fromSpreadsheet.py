@@ -9,18 +9,20 @@ http = urllib3.PoolManager()
 request = http.request('GET', url)
 csvFile = request.data
 
-currentProcessedIndex = 1
+currentProcessedIndex = 2
 
 # Kill the first line
 csvFile = '\n'.join(csvFile.split('\n')[currentProcessedIndex:])
 
 reader = csv.reader(csvFile.split('\n'), delimiter=',')
+index = 0
 for row in reader:
+		index += 1
 		if (len(row) == 6):
-				print '\nProcessing row: ' + ','.join(row)
+				print '\nProcessing row ' + str(index) + ': ' + ','.join(row)
 				print '---------------------'
 				url = row[0]
-				name = row[1]
+				name = str(index) + "~" + row[1]
 				startTime = row[2]
 				endTime = row[3]
 				type = row[4]
@@ -42,5 +44,5 @@ for row in reader:
 											 name, '--startTime', startTime, '--endTime', endTime,
 											 '--tags', tags]
 
-		print ' '.join(command)
-		call(command)
+				print ' '.join(command)
+				call(command)

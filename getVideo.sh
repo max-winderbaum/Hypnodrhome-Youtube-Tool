@@ -12,6 +12,6 @@ if [ -n "$ENDTIME" ]; then
   python editVideo.py --input="$VIDEOURL" --output="$FILE_NAME" --startTime="$STARTTIME" --endTime="$ENDTIME"
 else
   echo "Copying downloaded video..."
-  cp downloads/$FILE_NAME.mp4 videos/$FILE_NAME.mp4
+  cp downloads/$VIDEOURL.mp4 videos/$FILE_NAME.mp4
 fi
 
