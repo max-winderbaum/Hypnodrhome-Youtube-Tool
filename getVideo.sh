@@ -4,7 +4,7 @@
 source $(dirname $0)/bashArgumentParser.sh
 
 if [ ! -f "downloads/$VIDEOURL.mp4" ]; then
-  youtube-dl $VIDEOURL -o downloads/$VIDEOURL --recode-video mp4 --no-check-certificate --prefer-insecure
+  youtube-dl $VIDEOURL -o "downloads/$VIDEOURL.%(ext)s" --recode-video mp4 --no-check-certificate --prefer-insecure
 else
   echo "Skipping downloading $VIDEOURL because it already exists!"
 fi
