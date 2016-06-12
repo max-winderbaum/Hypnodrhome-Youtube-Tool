@@ -21,7 +21,7 @@ for row in reader:
 		if (len(row) == 6):
 				print '\nProcessing row ' + str(index) + ': ' + ','.join(row)
 				print '---------------------'
-				url = row[0]
+				url = row[0].replace('/', '=')
 				name = str(index) + "~" + row[1]
 				startTime = row[2]
 				endTime = row[3]
